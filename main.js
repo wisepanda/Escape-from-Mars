@@ -7,9 +7,9 @@
 
 
 async function getLogs(){
-    Response = await fetch("https://task-escape-api.herokuapp.com/api/logs"); //{method: "GET",redirect:"follow"});
+    Response = await fetch("https://task-escape-api.herokuapp.com/api/logs/"); //{method: "GET",redirect:"follow"});
     let data = await Response.json();
-    console.log(data.date)
+    console.log(data[0].date)
 }
 getLogs()
 
@@ -48,6 +48,14 @@ getPerson()
 // GETGet messages
 // https://task-escape-api.herokuapp.com/api/messages?to=1
 // Retrieves a list of messages filtered by recipient, where the recipient id matches the to value
+
+async function getMessage(){
+    let response = await fetch("https://task-escape-api.herokuapp.com/api/messages?to=1");
+        data = await response .json()
+        console.log(data)
+}
+getMessage()
+
 
 // PARAMS
 // to
