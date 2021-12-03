@@ -68,7 +68,12 @@ getMessage()
 // GETGet hint
 // https://task-escape-api.herokuapp.com/api/hint
 // Returns some information to help understand what is required from a launch code
-
+async function getHint(){
+    let response = await fetch("https://task-escape-api.herokuapp.com/api/hint");
+        data = await response.json();
+        console.log(data)
+}
+getHint()
 
 
 // Example Request
